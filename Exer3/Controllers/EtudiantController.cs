@@ -22,7 +22,8 @@ namespace Exer3.Controllers
         // GET: Etudiant/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Etudiant etudiant = RetrouverEtudiantParId(id);
+            return View(etudiant);
         }
 
         // GET: Etudiant/Create
@@ -42,7 +43,8 @@ namespace Exer3.Controllers
         // GET: Etudiant/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Etudiant etudiant = RetrouverEtudiantParId(id);
+            return View(etudiant);
         }
 
         // POST: Etudiant/Edit/5
