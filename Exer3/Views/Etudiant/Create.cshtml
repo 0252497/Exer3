@@ -9,31 +9,31 @@
     <div class="col-md-5">
         <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            
+
             <div class="form-group">
                 <input asp-for="EtudiantID" class="form-control" type="number" name="EtudiantID" placeholder="Étudiant ID" />
             </div>
-            
+
             <div class="form-group">
                 <input asp-for="Prenom" class="form-control" type="text" name="Prenom" placeholder="Prénom" />
             </div>
-            
+
             <div class="form-group">
                 <input asp-for="Nom" class="form-control" type="text" name="Nom" placeholder="Nom" />
             </div>
-            
+
             <div class="form-group">
-                <input asp-for="Age" class="form-control" type="number" name="Age" placeholder="Âge" min="0" max="100"/>
+                <input asp-for="Age" class="form-control" type="number" name="Age" placeholder="Âge" min="0" max="100" />
             </div>
-            
+
             <div class="form-group">
                 <input asp-for="Courriel" class="form-control" type="email" name="Courriel" placeholder="Courriel" />
             </div>
-            
+
             <div class="form-group">
-                <input asp-for="Matricule" class="form-control" type="text" name="Prenom" placeholder="Matricule" />
+                <input asp-for="Matricule" class="form-control" type="text" name="Matricule" placeholder="Matricule" />
             </div>
-            
+
             <div class="form-group">
                 <label asp-for="Programme" class="control-label"></label>
                 <select asp-for="Programme" class="form-control" name="Programmes">
@@ -44,11 +44,11 @@
             </div>
 
             <div class="form-group">
-                <input asp-for="Telephone" class="form-control" type="text" name="Telephone" placeholder="Téléphone" pattern="[0-9()-]{13}"/>
+                <input asp-for="Telephone" class="form-control" type="text" name="Telephone" placeholder="Téléphone" pattern="[0-9()-]{13}" />
             </div>
             <br />
             <input type="submit" value="Soumettre" />
-           
+
         </form>
     </div>
 </div>
