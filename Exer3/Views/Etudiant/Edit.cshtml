@@ -13,47 +13,44 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="EtudiantID" class="control-label"></label>
-                <input asp-for="EtudiantID" class="form-control" />
+                <input asp-for="EtudiantID" class="form-control" placeholder="EtudiantID"/>
                 <span asp-validation-for="EtudiantID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Prenom" class="control-label"></label>
-                <input asp-for="Prenom" class="form-control" />
+                <input asp-for="Prenom" class="form-control" placeholder="Prénom"/>
                 <span asp-validation-for="Prenom" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Nom" class="control-label"></label>
-                <input asp-for="Nom" class="form-control" />
+                <input asp-for="Nom" class="form-control" placeholder="Nom"/>
                 <span asp-validation-for="Nom" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Age" class="control-label"></label>
-                <input asp-for="Age" class="form-control" />
+                <input asp-for="Age" class="form-control" placeholder="Prénom"/>
                 <span asp-validation-for="Age" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Courriel" class="control-label"></label>
-                <input asp-for="Courriel" class="form-control" />
+                <input asp-for="Courriel" class="form-control" placeholder="Courriel"/>
                 <span asp-validation-for="Courriel" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Matricule" class="control-label"></label>
-                <input asp-for="Matricule" class="form-control" />
+                <input asp-for="Matricule" class="form-control" placeholder="Matricule"/>
                 <span asp-validation-for="Matricule" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Programme" class="control-label"></label>
-                <input asp-for="Programme" class="form-control" />
+                <select asp-for="Programme" class="form-control" name="Programmes">
+                    <option value="Informatique" selected>Informatique</option>
+                    <option value="Administration" selected>Administration</option>
+                    <option value="Art" selected>Art</option>
+                </select>
                 <span asp-validation-for="Programme" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Telephone" class="control-label"></label>
-                <input asp-for="Telephone" class="form-control" />
+                <input asp-for="Telephone" class="form-control" placeholder="Téléphone"/>
                 <span asp-validation-for="Telephone" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Sauvegarder" class="btn btn-default" />
             </div>
         </form>
     </div>
