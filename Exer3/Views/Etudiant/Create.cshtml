@@ -11,15 +11,15 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
-                <input asp-for="EtudiantID" class="form-control" type="number" name="EtudiantID" placeholder="Étudiant ID" />
+                <input asp-for="EtudiantID" class="form-control" type="number" placeholder="Étudiant ID" />
             </div>
 
             <div class="form-group">
-                <input asp-for="Prenom" class="form-control" type="text" name="Prenom" placeholder="Prénom" />
+                <input asp-for="Prenom" class="form-control" type="text" placeholder="Prénom" />
             </div>
 
             <div class="form-group">
-                <input asp-for="Nom" class="form-control" type="text" name="Nom" placeholder="Nom" />
+                <input asp-for="Nom" class="form-control" type="text" placeholder="Nom" />
             </div>
 
             <div class="form-group">
@@ -35,11 +35,11 @@
             </div>
 
             <div class="form-group">
-                <label asp-for="Programme" class="control-label"></label>
-                <select asp-for="Programme" class="form-control" name="Programmes">
-                    <option value="Informatique" selected>Informatique</option>
-                    <option value="Administration" selected>Administration</option>
-                    <option value="Art" selected>Art</option>
+                <label asp-for="Programme" class="control-label">Programme</label>
+                <select asp-for="Programme" class="form-control">
+                    <option value="Informatique">Informatique</option>
+                    <option value="Administration">Administration</option>
+                    <option value="Art">Art</option>
                 </select>
             </div>
 

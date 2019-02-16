@@ -16,35 +16,46 @@
                 <input asp-for="EtudiantID" class="form-control" placeholder="EtudiantID" />
                 <span asp-validation-for="EtudiantID" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input asp-for="Prenom" class="form-control" placeholder="Prénom" />
                 <span asp-validation-for="Prenom" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input asp-for="Nom" class="form-control" placeholder="Nom" />
                 <span asp-validation-for="Nom" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input asp-for="Courriel" class="form-control" placeholder="Courriel" />
                 <span asp-validation-for="Courriel" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <input asp-for="Age" class="form-control" type="number" placeholder="Âge" min="0" max="100" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input asp-for="Matricule" class="form-control" placeholder="Matricule" />
                 <span asp-validation-for="Matricule" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="Programme" class="control-label"></label>
-                <select asp-for="Programme" class="form-control" name="Programmes">
-                    <option value="Informatique" selected>Informatique</option>
-                    <option value="Administration" selected>Administration</option>
-                    <option value="Art" selected>Art</option>
+                <label asp-for="Programme" class="control-label">Programme</label>
+                <select asp-for="Programme" class="form-control">
+                    <option value="Informatique">Informatique</option>
+                    <option value="Administration">Administration</option>
+                    <option value="Art">Art</option>
                 </select>
-                <span asp-validation-for="Programme" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input asp-for="Telephone" class="form-control" placeholder="Téléphone" />
+                <input asp-for="Telephone" class="form-control" type="text" placeholder="Téléphone" pattern="[0-9()-]{13}" />
                 <span asp-validation-for="Telephone" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <input type="submit" value="Sauvegarder" class="btn btn-default" />
             </div>
