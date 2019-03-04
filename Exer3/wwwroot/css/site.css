@@ -34,15 +34,12 @@
     }
 }
 
+dt {
+    padding: 5px;
+}
+
 h2 {
     margin-bottom: 50px;
     margin-top: 75px;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-h4 {
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 25px;
+    text-transform: uppercase;
 }
