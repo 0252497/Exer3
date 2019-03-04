@@ -1,62 +1,29 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Accueil";
 }
 
 <div class="row">
     <div class="col-md-12">
-        <h1>Exercice #3</h1>
-        
-        <h4>1. Créer un index qui utilisera le template "List" et qui permettra d'afficher la liste des étudiants chargée en session dans le contrôleur "Etudiant".</h4>
-        <ul>
-            <li>La méthode d'action Index du contrôleur Etudiant récupèrera la liste des étudiants en session et enverra celle-ci à la vue correspondante (Etudiant/Index.cshtml).</li>
-            <li>Pour envoyer les données à la vue, il suffit de passer la liste d'étudiants comme paramètre de la méthode "View".</li>
-        </ul>
-        
-        <div>Note : Une fois cette étape terminée, vous verrez une liste des étudiants avec des liens "Edit" et "Delete" au bout de chaque ligne de même qu'un bouton "Create" au haut de la page. Les étapes suivantes permettront de rendre ces liens fonctionnels.</div>
+        <h2>
+            Service de l'informatique <br />
+            Cégep de St-Jean-sur-Richelieu
+        </h2>
 
-        <h4>2. Ajouter une vue "Etudiant/Create" pour la création d'un nouvel étudiant. Cette vue ne doit utiliser aucun template mais doit utiliser le modèle Etudiant. Vous devez donc créer un formulaire (méthode d'envoi des données : post) et y intégrer tous les champs du modèle:</h4>
-        <ul>
-            <li>EtudiantID : Champ numérique obligatoire</li>
-            <li>Prenom : Champ texte obligatoire</li>
-            <li>Nom : Champ texte obligatoire</li>
-            <li>Age : Champ numérique, valeur comprise entre 0 et 100</li>
-            <li>Courriel : Champ de type courriel obligatoire</li>
-            <li>Matricule : Champ texte</li>
-            <li>Programme : Liste déroulante comprenant les choix "Informatique", "Adimistration" et "Art"</li>
-            <li>Telephone : Champ texte</li>
-        </ul>    
+        <div class="content">
+            <img src="\images\info.jpg">
+        </div>
 
-        <h4>3. Ajouter le code aux méthodes d'action "Create" pour les rendre fonctionelles. (Vous n'avez pas à coder la partie permettant de sauvegarder l'étudiant en session, vous pouvez utiliser la méthode que j'ai incluse dans le contrôleur).</h4>
-        <ul>
-            <li>Après avoir ajouté un étudiant à la liste, effectuer une redirection vers l'index.</li>
-        </ul>
+        <dl>
+            <dt>Laboratoires</dt>
+            <dd>- Rapport d'incident</dd>
+            <dd>- Horaires</dd>
+            <dt>Offres d'emploi et offres ATE</dt>
+            <dt>Magasin de logiciels</dt>
+            <dt>Serveurs du département</dt>
+            <dt>Tutorat</dt>
+            <dd>- Demander un tuteur</dd>
+            <dd>- Offrir ses services de tuteur</dd>
+        </dl>
 
-        <h4>4. Créer une vue Etudiant/Edit qui permettra de modifier un étudiant existant.</h4>
-        <ul>
-            <li>Utiliser le modèle "Edit" pour la création de la vue.</li>
-            <li>Les champs doivent respecter les mêmes critères que ceux définis à l'étape #2 (types de champs, obligatoire, etc.)</li>
-            <li>La méthode d'action "Edit" du contrôleur Etudiant recevra l'identifiant de l'étudiant à modifier (ID).</li>
-            <li>À partir de cet identifiant, vous pourrez récupérer l'objet du modèle correspondant et le renvoyer à la vue.</li>
-            <li>N'oubliez pas de décommenter le code dans le vue "Index" qui permet de passer l'id de l'élément sélectionné en paramètre.</li>
-            <li>Après avoir modifié l'étudiant, effectuer une redirection vers l'index.</li>
-            <li>Dans le modèle, ajouter la ligne suivante au-dessus de la propriété EtudiantID : [Required(ErrorMessage = "L'id de l'étudiant est requis")]</li>
-            <li>Reproduire sur tous les champs obligatoire et adapter le message</li>
-            <li>Dans le modèle, ajouter la ligne suivante au-dessus de la propriété Courriel : [EmailAddress(ErrorMessage = "Veuillez saisir une adresse courriel valide")]</li>
-        </ul>
-
-
-        <h4>5. Créer une vue Etudiant/Details qui permettra de visualiser un étudiant existant.</h4>
-        <ul>
-            <li>Utiliser le modèle "Details" pour la création de la vue</li>
-            <li>La méthode d'action "Details" du contrôleur Etudiant recevra l'identifiant de l'étudiant à modifier (ID).</li>
-            <li>À partir de cet identifiant, vous pourrez récupérer l'objet du modèle correspondant et le renvoyer à la vue.</li>
-            <li>N'oubliez pas de décommenter le code dans le vue "Index" qui permet de passer l'id de l'élément sélectionné en paramètre.</li>
-            <li>N'oubliez pas de décommenter le code dans le vue "Details" qui permet de passer l'id de l'élément sélectionné en paramètre à la méthode d'action "Edit".</li>
-        </ul>
-
-        <h4>6. Créer une méthode d'action "Etudiant/Delete" qui permettra de retirer un étudiant de la liste.</h4>
-        <ul>
-            <li>Après avoir retirer l'item de la liste, effectuer une redirection vers l'index.</li>
-        </ul> 
-</div>
+    </div>
 </div>
