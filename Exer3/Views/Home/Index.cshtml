@@ -17,13 +17,20 @@
             <dt>Laboratoires</dt>
             <dd>- Rapport d'incident</dd>
             <dd>- Horaires</dd>
-            <dt href="http://www1.cstjean.qc.ca/emploisstages">Offres d'emploi et offres ATE</dt>
-            <dt href="https://cstjean.onthehub.com/">Magasin de logiciels</dt>
+            <dt><a href="http://www1.cstjean.qc.ca/emploisstages">Offres d'emploi et offres ATE</a></dt>
+            <dt><a href="https://cstjean.onthehub.com/">Magasin de logiciels</a></dt>
             <dt>Serveurs du département</dt>
             <dt>Tutorat</dt>
-            <dd>- Demander un tuteur</dd>
-            <dd>- Offrir ses services de tuteur</dd>
+            <dd>
+                <a asp-area="" asp-controller="Tutorat" asp-action="DemandeTuteur">
+                    - Demander un tuteur
+                </a>
+            </dd>
+            <dd>
+                <a asp-area="" asp-controller="Tutorat" asp-action="OffrirTuteur">
+                    - Offrir ses services de tuteur
+                </a>
+            </dd>
         </dl>
-
     </div>
 </div>

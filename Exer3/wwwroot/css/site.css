@@ -34,12 +34,7 @@
     }
 }
 
-dt {
-    padding: 5px;
+h2 {
+    text-transform: capitalize;
 }
 
-h2 {
-    margin-bottom: 50px;
-    margin-top: 75px;
-    text-transform: uppercase;
-}

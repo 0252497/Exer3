@@ -1,0 +1,59 @@
+﻿@model Exer3.Models.RapportIncident
+
+@{
+    ViewData["Title"] = "RapportIncident";
+}
+
+<h2>RapportIncident</h2>
+
+<h4>RapportIncident</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RapportIncident">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="Prenom" class="form-control" placeholder="Prénom" />
+                <span asp-validation-for="Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Nom" class="form-control" placeholder="Nom" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Identifiant" class="form-control" placeholder="Identifiant" />
+                <span asp-validation-for="Identifiant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Courriel" class="form-control" placeholder="Courriel" />
+                <span asp-validation-for="Courriel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Probleme" class="control-label"></label>
+                <input asp-for="Probleme" class="form-control" />
+                <span asp-validation-for="Probleme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PlateformeErreur" class="control-label"></label>
+                <input asp-for="PlateformeErreur" class="form-control" />
+                <span asp-validation-for="PlateformeErreur" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DescriptionComportement" class="control-label"></label>
+                <input asp-for="DescriptionComportement" class="form-control" />
+                <span asp-validation-for="DescriptionComportement" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Soumettre" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Retour à l'accueil</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

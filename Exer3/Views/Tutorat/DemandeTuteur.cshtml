@@ -1,0 +1,47 @@
+﻿@model Exer3.Models.DemandeTuteur
+
+@{
+    ViewData["Title"] = "TUTORAT";
+}
+
+<h2>Demander un tuteur</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="DemandeTuteur" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="Prenom" class="form-control" placeholder="Prénom"/>
+                <span asp-validation-for="Prenom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Nom" class="form-control" placeholder="Nom"/>
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="NumeroDA" class="form-control" placeholder="Numéro DA"/>
+                <span asp-validation-for="NumeroDA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input asp-for="Courriel" class="form-control" placeholder="Courriel"/>
+                <span asp-validation-for="Courriel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <textarea asp-for="Cours" class="form-control" placeholder="Cours" rows="20" cols="10"></textarea>
+                <span asp-validation-for="Cours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Soumettre" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Retour à l'accueil</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

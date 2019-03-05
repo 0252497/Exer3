@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - TP1_VéroniqueGiguère</title>
+
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
@@ -48,8 +49,8 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Demander un tuteur</a></li>
-                            <li><a href="#">Offrir ses services de tuteur</a></li>
+                            <li><a asp-area="" asp-controller="Tutorat" asp-action="DemandeTuteur">Demander un tuteur</a></li>
+                            <li><a asp-area="" asp-controller="Tutorat" asp-action="OffrirTuteur">Offrir ses services de tuteur</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -63,6 +64,7 @@
             <p>&copy; 2019 - Véronique Giguère</p>
         </footer>
     </div>
+
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
@@ -83,6 +85,7 @@
         </script>
         <script src="~/js/site.min.js" asp-append-version="true"></script>
     </environment>
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
