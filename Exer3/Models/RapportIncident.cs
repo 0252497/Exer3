@@ -20,6 +20,11 @@ namespace Exer3.Models
         [Required(ErrorMessage = "L'identifiant est requis")]
         public string Identifiant { get; set; }
 
+        [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$",
+        ErrorMessage = "Le format de l'adresse courriel est invalide")]
+        [Required(ErrorMessage = "Le courriel de l'étudiant est requis")]
+        public string Courriel { get; set; }
+
         [Required(ErrorMessage = "Veuillez entrer votre incident")]
         public TypeProblème Probleme { get; set; }
 

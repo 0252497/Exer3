@@ -1,12 +1,11 @@
 ﻿@model Exer3.Models.RapportIncident
 
 @{
-    ViewData["Title"] = "RapportIncident";
+    ViewData["Title"] = "Rapport d'incident";
 }
 
-<h2>RapportIncident</h2>
+<h2>Rapport d'incident</h2>
 
-<h4>RapportIncident</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -30,7 +29,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Probleme" class="control-label"></label>
-                <input asp-for="Probleme" class="form-control" />
+                @Html.RadioButtonFor(m => m.Probleme, "", true, new { @class = "form-control" })
                 <span asp-validation-for="Probleme" class="text-danger"></span>
             </div>
             <div class="form-group">
