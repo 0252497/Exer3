@@ -28,18 +28,24 @@
                 <span asp-validation-for="Courriel" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Probleme" class="control-label"></label>
-                @Html.RadioButtonFor(m => m.Probleme, "", true, new { @class = "form-control" })
-                <span asp-validation-for="Probleme" class="text-danger"></span>
+                <h4>Type de problème</h4>
+                @using (Html.BeginForm())
+                {
+                    @Html.RadioButtonFor(s => s.Probleme, TypeProblème.MessageErreur)@Html.Label("Message d'erreur")<br />
+                    @Html.RadioButtonFor(s => s.Probleme, TypeProblème.ProblemeConnexion)@Html.Label("Problème de connexion")<br />
+                    @Html.RadioButtonFor(s => s.Probleme, TypeProblème.OubliMotDePasse)@Html.Label("Oubli du mot de passe")<br />
+                    @Html.RadioButtonFor(s => s.Probleme, TypeProblème.Autre)@Html.Label("Autre")<br />
+                    <span asp-validation-for="Probleme" class="text-danger"></span>
+                }
             </div>
             <div class="form-group">
-                <label asp-for="PlateformeErreur" class="control-label"></label>
-                <input asp-for="PlateformeErreur" class="form-control" />
+                @Html.DropDownListFor(m => m.PlateformeErreur, new SelectList(Enum.GetValues(typeof(Plateforme))),
+                      "Plateforme causant l’erreur", new { @class = "form-control" })
                 <span asp-validation-for="PlateformeErreur" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DescriptionComportement" class="control-label"></label>
-                <input asp-for="DescriptionComportement" class="form-control" />
+                <textarea asp-for="DescriptionComportement" class="form-control" 
+                    placeholder="Description du comportement" rows="20" cols="10"></textarea>
                 <span asp-validation-for="DescriptionComportement" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -50,7 +56,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Retour à l'accueil</a>
+    <a asp-controller="Home" asp-action="Index">Retour à l'accueil</a>
 </div>
 
 @section Scripts {
