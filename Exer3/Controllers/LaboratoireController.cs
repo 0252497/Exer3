@@ -11,27 +11,31 @@ namespace Exer3.Controllers
 {
     public class LaboratoireController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
         public ActionResult RapportIncident()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult RapportIncident(RapportIncident incident)
+        public ActionResult EnvoyeMessage(RapportIncident p_rapportIncident)
         {
-            CreerDemande(incident);
-            return RedirectToAction("Index");
-        }
+            string nomUtilisateur = p_rapportIncident.Nom;
+            string identifiant = p_rapportIncident.Identifiant;
+            string courriel = p_rapportIncident.Courriel;
+            string typeProblèmes = p_rapportIncident.Probleme.ToString();
+            string plateforme = p_rapportIncident.PlateformeErreur.ToString();
+            string descriptionProblème = p_rapportIncident.DescriptionComportement;
 
-        public void CreerDemande(RapportIncident incident)
-        {
-            List<RapportIncident> incidents = HttpContext.Session.Get<List<RapportIncident>>("RapportIncident");
-            incidents.Add(incident);
-            HttpContext.Session.Set("RapportIncident", incidents);
+            string body = string.Format(
+                                    "Nom d'utilisateur: {0}" +
+                                    "\nNuméro DA: {1}" +
+                                    "\n\nType de problème: {2}" +
+                                    "\nPlateforme causant l’erreur: {3}" +
+                                    "\nDescription du problème: {4}",
+                                    nomUtilisateur, identifiant, typeProblèmes, plateforme, descriptionProblème);
+
+            Mail.MailHelper.EnvoyeMessage("Type de probleme", "nimporteQuoi", "giguere.vero@gmail.com");
+            return RedirectToAction("Laboratoire/RapportIncident");
         }
     }
 }
