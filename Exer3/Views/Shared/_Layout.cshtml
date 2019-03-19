@@ -42,12 +42,12 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a asp-area="" asp-controller="Laboratoire" asp-action="RapportIncident">Rapport d'incident</a></li>
-                            <li><a href="#">Horaires</a></li>
+                            <li><a a target="_blank" href="~/documents/Horaires_des_locaux.pdf">Horaires</a></li>
                         </ul>
                     </li>
                     <li><a href="http://www1.cstjean.qc.ca/emploisstages">Offres d'emploi et offres ATE</a></li>
                     <li><a href="https://cstjean.onthehub.com/">Magasin de logiciels</a></li>
-                    <li><a href="#">Serveurs du département</a></li>
+                    <li><a asp-controller="Serveur" asp-action="ListeServeurs">Serveurs du département</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Tutorat
@@ -58,7 +58,7 @@
                             <li><a asp-area="" asp-controller="Tutorat" asp-action="OffrirTuteur">Offrir ses services de tuteur</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Nous joindre</a></li>
+                    <li><a asp-area="" asp-controller="NousJoindre" asp-action="NousJoindre">Nous joindre</a></li>
                 </ul>
             </div>
         </div>

@@ -21,13 +21,13 @@
                 </a>
             </dd>
             <dd>
-                <a asp-area="" asp-controller="VoirDocument" asp-action="Index">
+                <a target="_blank" href="~/documents/Horaires_des_locaux.pdf">
                     - Horaires des locaux
                 </a>
             </dd>
             <dt><a href="http://www1.cstjean.qc.ca/emploisstages">Offres d'emploi et offres ATE</a></dt>
             <dt><a href="https://cstjean.onthehub.com/">Magasin de logiciels</a></dt>
-            <dt>Serveurs du département</dt>
+            <dt><a asp-area="" asp-controller="Serveur" asp-action="Index">Serveurs du département</a></dt>
             <dt>Tutorat</dt>
             <dd>
                 <a asp-area="" asp-controller="Tutorat" asp-action="DemandeTuteur">
@@ -37,6 +37,11 @@
             <dd>
                 <a asp-area="" asp-controller="Tutorat" asp-action="OffrirTuteur">
                     - Offrir ses services de tuteur
+                </a>
+            </dd>
+            <dd>
+                <a asp-area="" asp-controller="NousJoindre" asp-action="NousJoindre">
+                    - Nous joindre
                 </a>
             </dd>
         </dl>

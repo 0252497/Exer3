@@ -29,14 +29,11 @@
             </div>
             <div class="form-group">
                 <h4>Type de problème</h4>
-                @using (Html.BeginForm())
-                {
                     @Html.RadioButtonFor(s => s.Probleme, TypeProblème.MessageErreur)@Html.Label("Message d'erreur")<br />
                     @Html.RadioButtonFor(s => s.Probleme, TypeProblème.ProblemeConnexion)@Html.Label("Problème de connexion")<br />
                     @Html.RadioButtonFor(s => s.Probleme, TypeProblème.OubliMotDePasse)@Html.Label("Oubli du mot de passe")<br />
                     @Html.RadioButtonFor(s => s.Probleme, TypeProblème.Autre)@Html.Label("Autre")<br />
                     <span asp-validation-for="Probleme" class="text-danger"></span>
-                }
             </div>
             <div class="form-group">
                 @Html.DropDownListFor(m => m.PlateformeErreur, new SelectList(Enum.GetValues(typeof(Plateforme))),
